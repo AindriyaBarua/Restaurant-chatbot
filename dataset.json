@@ -1,0 +1,73 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "Hey", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "Good morning!", "Hey! Good morning", "Hey there", "Hey Janet", "Very good morning"],
+     "responses": ["Hello I'm Janet aka The Restaurant Superbot!", "Hi! I'm Janet aka The Restaurant Superbot.", "Hi there, how can I help?", "How may I help you?", "Hey there!"]
+    },
+    {"tag": "book_table",
+     "patterns": ["Book a table","Can I book a table?", "I want to book a table", "Book seat", "I want to book a seat", "Can I book a seat?", "Could you help me book a table"],
+     "responses": [""]
+    },
+    {"tag": "available_tables",
+     "patterns": ["How many seats are available?", "Available seats", "How many tables are available?", "Available tables", ""],
+     "patterns": ["How many seats are available?", "Available seats", "How many tables are available?", "Available tables", "Do you have any tables available?", "Are there any tables left?"],
+     "responses": [""]
+    },
+    {"tag": "goodbye",
+     "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "cya later", "I gotta go now", "I gotta rush now"],
+     "responses": ["It's been my pleasure serving you!", "Hope to see you again soon! Goodbye!"]
+    },
+    {"tag": "name",
+     "patterns": ["what is your name", "what should I call you", "whats your name?"],
+     "responses": ["You can call me Janet.", "I'm Janet!", "I'm Janet aka The Restaurant Superbot."]
+    },
+    {"tag": "hours",
+     "patterns": ["when are you guys open", "what are your hours", "hours of operation", "hours", "what is the timing", "what is "],
+     "responses": ["We are open 10am-12am Monday-Friday!"]
+    },
+    {"tag": "menu",
+     "patterns": ["Id like to order something", "whats on the menu", "could i get something to eat", "Im damn hungry"],
+     "responses": [""]
+    },
+    {"tag": "contact",
+     "patterns": ["contact information", "how do we contact you", "how can i contact you", "can i get the contact details", "I wanna give some feedback", "how can i give some feedback?"],
+     "responses": ["You can contact us at contact@restaurantname.com"]
+    },
+    {"tag": "address",
+     "patterns": ["what is the location?","whats the location", "where are you locatated?", "where is the restaurant located?", "address", "whats the address?"],
+     "responses": ["You can locate us at Taj Lands End, Bandra Bandstand, Bandra West, Mumbai, Maharashtra 400 050"]
+    },
+    {"tag": "positive_feedback",
+        "patterns": ["the noodles were amazing","i loved the food", "my son devoured the brownie!", "pizza was so cheesy!", "perfectly baked", "we are very satisfied with the service", "the soup was a real game changer", "such delicious flavours", "so glad we discovered this place", "Me and my family is very satisfied with this service and food"],
+        "responses": ["Thank you so much for your valuable feedback. We look forward to serving you again!"]
+    },
+    {"tag": "negative_feedback",
+        "patterns": ["what the fuck is wrong with these noodles?", "The choco lava was so undercooked", "Ew such a waste of money man", "too salty", "we were served cold food", "so dissapointed", "please train the staff properly"],
+        "responses": ["Thank you so much for your valuable feedback. We deeply regret the inconvinience. We have forwarded your concerns to the authority and hope to satisfy you better the next time!"]
+    },
+    {"tag": "sanitation",
+        "patterns": ["Hey is it really safe to eat here?","Could you tell your COVID safety protocols?", "I would like to know about the cleanliness of the restaurant", "Please share your sanitization process", "I am concerned about the COVID related sanitization", "Is it safe to eat out in this pandemic?"],
+        "responses": ["I understand your concern. Here are the WHO recommended COVID protocols we follow to ensure your safety: \n 1. All our staff are double masked 24x7. \n 2. All our staff is chceked for fevers and other symptoms daily. \n 3. All surfaces are frequently sanitized. \n 4. We use this friendly bot to reduce physical closeness to the least!"]
+    },
+    {"tag": "offers",
+        "patterns": ["Could you tell me the pocket friendly options?","Are there any discounts going on?", "Are there any special offers today?", "What about the festive offers?", "Could you please tell me which foods are on discount?"],
+        "responses": [""]
+    },
+    {"tag": "vegan_enquiry",
+        "patterns": ["Can I see the vegan option?","Do you have any vegan options??", "What is vegan in your menu?", "I am vegan.", "Do you also have vegan food?"],
+        "responses": [""]
+    },
+    {"tag": "veg_enquiry",
+        "patterns": ["Can I see the vegetarian options?","Do you have any vegetarian options??", "Please show me your best vegetarian foods", "I dont want to eat non veg", "I am vegetarian"],
+        "responses": [""]
+    },
+    {"tag": "recipe_enquiry",
+        "patterns": ["Could you tell me more about this dish?","Is there", "I would like to know about the cleanliness of the restaurant", "Please share your sanitization process", "I am concerned about the COVID related sanitization", "Is it safe to eat out in this pandemic?"],
+        "responses": ["I understand your concern. Here are the WHO recommended COVID protocols we follow to ensure your safety: \n 1. All our staff are double masked 24x7. \n 2. All our staff is chceked for fevers and other symptoms daily. \n 3. All surfaces are frequently sanitized. \n 4. We use this friendly bot to reduce physical closeness to the least!"]
+    },
+    {"tag": "suggest",
+        "patterns": ["what do you recommend?","do you have any suggestions", "well this menu has so many things, i cant choose", "help me choose what to order", "Surprise me!", "Do you have any special recommendations for me?", "What do you suggest, Janet?"],
+        "responses": [""]
+    }
+
+]
+}
