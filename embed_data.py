@@ -1,15 +1,12 @@
-import nltk
 import numpy as np
-import tflearn
-import tensorflow as tf
-import random
+
 import json
-import pickle
 import fasttext as ft
 
 import gzip
 import shutil
-import string
+
+import preprocess_sentence
 
 
 def parse_data(ft_model):
@@ -20,20 +17,24 @@ def parse_data(ft_model):
     embedded_patterns = []
     # Looping through our data
     for intent in data['intents']:
-        print(intent)
+        #print(intent)
 
         for pattern in intent['patterns']:
-            pattern = pattern.lower()
-            pattern.translate(str.maketrans('', '', string.punctuation))
+            print(pattern)
+            pattern = preprocess_sentence.preprocess_main(pattern)
+            print(pattern)
             embedded_sentence = embed_sentence(pattern, ft_model)
+            if np.linalg.norm((np.array(embedded_sentence)) == 0):
+                print("SUSSSS-----------", pattern)
+                print(embedded_sentence)
             embedded_patterns.append(embedded_sentence)
         intent['patterns'] = np.array(embedded_patterns).tolist()
 
         # doc means sentence
-    labels = sorted(labels)
-    print(labels)
-    print('____________________________')
-    print(data)
+    #labels = sorted(labels)
+    #print(labels)
+    #print('____________________________')
+    #print(data)
 
     return data
 
