@@ -1,10 +1,10 @@
 {"intents": [
     {"tag": "greeting",
-     "patterns": ["Hi", "Hey", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "Good morning!", "Hey! Good morning", "Hey there", "Hey Janet", "Very good morning", "Knock knock", "Hello is any body in there?", "A very good morning to you", "Hey dude", "Greeting", "Greetings to you"],
+     "patterns": ["Hi", "Hey", "Hello", "Good morning!", "Hey! Good morning", "Hey there", "Hey Janet", "Very good morning", "A very good morning to you", "Greeting", "Greetings to you"],
      "responses": ["Hello I'm Janet aka The Restaurant Superbot!", "Hi! I'm Janet aka The Restaurant Superbot.", "Hi there, how can I help?", "How may I help you?", "Hey there!"]
     },
     {"tag": "book_table",
-     "patterns": ["Book a table","Can I book a table?", "I want to book a table", "Book seat", "I want to book a seat", "Can I book a seat?", "Could you help me book a table", "Can I reserve a seat?", "I need a reservation", "Can you help me with a reservation", "Can I book a reservation", "Do you have a place in the restaurant", "Can i have a table?", "Help me reserve a table"],
+     "patterns": ["Book a table","Can I book a table?", "I want to book a table", "Book seat", "I want to book a seat", "Can I book a seat?", "Could you help me book a table", "Can I reserve a seat?", "I need a reservation", "Can you help me with a reservation", "Can I book a reservation", "Can i have a table?", "Help me reserve a table"],
      "responses": [""]
     },
     {"tag": "available_tables",
@@ -12,7 +12,7 @@
      "responses": [""]
     },
     {"tag": "goodbye",
-     "patterns": ["cya", "See you later", "Goodbye", "Good bye dear", "Bye dear","I am Leaving", "Have a Good day", "cya later", "I gotta go now", "I gotta rush now", "Thank you, bye", "Bye", "Ok Bye", "Okay goodnight", "Have a good day ahead", "Have a great day", "Tata", "Take care"],
+     "patterns": ["cya", "I will leave now","See you later", "Goodbye", "Leaving now, Bye" , "Good bye dear", "Bye dear","I am Leaving", "Have a Good day", "cya later", "I gotta go now", "I gotta rush now", "Thank you, bye", "Bye", "Ok Bye", "Okay goodnight", "Have a good day ahead", "Have a great day", "Tata", "Take care"],
      "responses": ["It's been my pleasure serving you!", "Hope to see you again soon! Goodbye!"]
     },
     {"tag": "identity",
@@ -28,23 +28,23 @@
      "responses": [""]
     },
     {"tag": "contact",
-     "patterns": ["contact information", "how do we contact you", "how can i contact you", "can i get the contact details", "I wanna give some feedback", "how can i give some feedback?", "CAn you give me the contact of an executive?", "Can you give me your number", "Can i get the customer care number?", "CAn I get help desk number"],
+     "patterns": ["contact information", "how do we contact you", "how can i contact you", "can i get the contact details", "I wanna give some feedback", "how can i give some feedback?", "CAn you give me the contact of an executive?", "What is the help desk phone number?","Can you give me your number", "Can i get the customer care number?", "CAn I get help desk number"],
      "responses": ["You can contact us at contact@restaurantname.com"]
     },
     {"tag": "address",
-     "patterns": ["what is the location?","whats the location", "where are you locatated?", "where is the restaurant located?", "address", "whats the address?", "what is the address of the restaurant", "I am not able to locate you", "I cant find your location", "CAn i have the address of the restaurant", "Address?", "what is the address of this restaurant?"],
+     "patterns": ["what is the location?","whats the location", "where are you located?", "where is the restaurant located?", "address", "whats the address?", "what is the address of the restaurant", "I am not able to locate you", "I cant find your location", "CAn i have the address of the restaurant", "how to reach there?", "Address?", "what is the address of this restaurant?"],
      "responses": ["You can locate us at Taj Lands End, Bandra Bandstand, Bandra West, Mumbai, Maharashtra 400 050"]
     },
     {"tag": "positive_feedback",
-        "patterns": ["the noodles were amazing","i loved the food", "you did a good job", "my son devoured the brownie!", "pizza was so cheesy!", "perfectly baked", "we are very satisfied with the service", "the soup was a real game changer", "such delicious flavours", "so glad we discovered this place", "Me and my family is very satisfied with this service and food", "this place is awesome", "such amazing service", "staff is great", "so happy with the restaurant", "absolutely loved it here", "love this place"],
+        "patterns": ["the noodles were amazing","i loved the food", "you did a good job", "Love the food", "Really love it", "Love the staff behavior", "my son devoured the brownie!", "pizza was so cheesy!", "perfectly baked", "we are very satisfied with the service", "the soup was a real game changer", "such delicious flavours", "so glad we discovered this place", "Me and my family is very satisfied with this service and food", "this place is awesome"],
         "responses": ["Thank you so much for your valuable feedback. We look forward to serving you again!"]
     },
     {"tag": "negative_feedback",
-        "patterns": ["what the fuck is wrong with these noodles?", "The choco lava was so undercooked", "Ew such a waste of money man", "too salty", "we were served cold food", "so disappointed", "the food is pathetic", "eww", "i hate it", "hate the service","please train the staff properly", "This was such a waste of money", "What the hell is this food", "What the fuck is this customer service", "I am very dissatisfied with the taste", "The food is bullshit", "Shitty food, shitty staff", "your staff suck", "Extremely dissatisfied", "disappointed", "so bad", "very bad", "disgusting food"],
+        "patterns": ["what the fuck is wrong with these noodles?", "The choco lava was so undercooked", "Ew such a waste of money man", "too salty", "we were served cold food", "so disappointed", "the food is pathetic", "hate it", "my wife hates the food","eww", "hate the staff behavior", "i hate it", "hate the service","please train the staff properly", "This was such a waste of money", "Hate the staff", "Extremely dissatisfied", "disappointed", "so bad", "very bad", "disgusting food"],
         "responses": ["Thank you so much for your valuable feedback. We deeply regret the inconvinience. We have forwarded your concerns to the authority and hope to satisfy you better the next time!"]
     },
     {"tag": "sanitation",
-        "patterns": ["Hey is it really safe to eat here?","Could you tell your COVID safety protocols?", "I would like to know about the cleanliness of the restaurant", "Please share your sanitization process", "I am concerned about the COVID related sanitization", "Is it safe to eat out in this pandemic?", "are you clean", "i am concerned about the cleanliness"],
+        "patterns": ["is it really safe to eat here?","Could you tell your COVID safety protocols?", "I would like to know about the cleanliness of the restaurant", "Please share your sanitization process", "I am concerned about the COVID related sanitization", "Is it safe to eat out in this pandemic?", "are you clean", "i am concerned about the cleanliness"],
         "responses": ["I understand your concern. Here are the WHO recommended COVID protocols we follow to ensure your safety: \n 1. All our staff are double masked 24x7. \n 2. All our staff is checked for fevers and other symptoms daily. \n 3. All surfaces are frequently sanitized. \n 4. We use this friendly bot to reduce physical closeness to the least!"]
     },
     {"tag": "offers",
@@ -60,13 +60,13 @@
         "responses": [""]
     },
     {"tag": "recipe_enquiry",
-        "patterns": ["Could you tell me more about this dish?", "WHat is the recipe of this dish?", "what are the ingredients of this dish?", "tell me the recipe", "what is there in this dish", "tell me more about this dish"],
+        "patterns": ["Could you tell me more about recipe of this dish?", "WHat is the recipe of this dish?", "what are the ingredients of this dish?", "tell me the recipe"],
         "responses": [""]
     },
+
     {"tag": "suggest",
-        "patterns": ["what do you recommend?","do you have any suggestions","please suggest something","why don't you recommend me a dish", "well this menu has so many things, i cant choose", "help me choose what to order", "Surprise me!", "Do you have any special recommendations for me?", "What do you suggest, Janet?", "what is your suggestion", "what is a must try", "what should i try", "what should i eat?", "tell me what to order", "tell me what i should buy", "recommend me a dish", "suggest me a dish"],
+        "patterns": ["what do you recommend?","do you have any suggestions","please suggest something","why don't you recommend me a dish", "help me choose what to order", "Surprise me!", "Do you have any special recommendations for me?", "What do you suggest, Janet?", "what is your suggestion", "what is a must try", "what should i try", "what should i eat?", "tell me what to order", "tell me what i should buy", "recommend me a dish", "suggest me a dish"],
         "responses": [""]
     }
-
 ]
 }

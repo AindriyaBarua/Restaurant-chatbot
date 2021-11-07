@@ -12,29 +12,17 @@ import preprocess_sentence
 def parse_data(ft_model):
     with open("dataset.json") as file:
         data = json.load(file)
-    orig_data = data
-    labels = []
+
     embedded_patterns = []
-    # Looping through our data
     for intent in data['intents']:
-        #print(intent)
 
         for pattern in intent['patterns']:
-            print(pattern)
             pattern = preprocess_sentence.preprocess_main(pattern)
-            print(pattern)
             embedded_sentence = embed_sentence(pattern, ft_model)
-            if np.linalg.norm((np.array(embedded_sentence)) == 0):
-                print("SUSSSS-----------", pattern)
-                print(embedded_sentence)
+
             embedded_patterns.append(embedded_sentence)
         intent['patterns'] = np.array(embedded_patterns).tolist()
 
-        # doc means sentence
-    #labels = sorted(labels)
-    #print(labels)
-    #print('____________________________')
-    #print(data)
 
     return data
 

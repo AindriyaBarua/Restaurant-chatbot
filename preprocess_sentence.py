@@ -1,11 +1,8 @@
 import string
 
-import nltk
-from nltk.corpus import stopwords
 from pywsd.utils import lemmatize_sentence
 
-#nltk.download('averaged_perceptron_tagger')
-stop_words = set(stopwords.words('english'))
+stop_words = ['the', 'you', 'i', 'are', 'is', 'a', 'me', 'to', 'can', 'this', 'your', 'have', 'any', 'of', 'we', 'very', 'could', 'please', 'it', 'with', 'here', 'if', 'my', 'am']
 
 def remove_punctuation(sentence):
     return sentence.translate(str.maketrans('', '', string.punctuation))

@@ -5,5 +5,4 @@ tflearn
 flask
 gensim
 sklearn
-python-Levenshtein
-wn==0.0.22
+
