@@ -1,3 +1,7 @@
+"""
+Developed by Aindriya Barua in November, 2021
+"""
+
 import numpy as np
 
 import json
