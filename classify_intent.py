@@ -10,12 +10,10 @@ import numpy as np
 import embed_data
 import preprocess_sentence
 
+obj_text = codecs.open('embedded_data.json', 'r', encoding='utf-8').read()
+data = json.loads(obj_text)
 
-def load_embedded_intents():
-    obj_text = codecs.open('embedded_data.json', 'r', encoding='utf-8').read()
-    data = json.loads(obj_text)
-
-    return data
+ft_model = embed_data.load_embedding_model()
 
 
 def normalize(vec):
@@ -85,112 +83,8 @@ def detect_intent(data, input_vec):
     return max_sim_intent
 
 
-if __name__ == '__main__':
-    data = load_embedded_intents()
-
-    ft_model = embed_data.load_embedding_model()
-
-    input = "Hey!"
-    print("INPUT----->", input)
+def classify(input):
     input = preprocess_sentence.preprocess_main(input)
     input_vec = embed_data.embed_sentence(input, ft_model)
     output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "What are the working hours of the restaurant?"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "Are there any seats available now?"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "Ok, please book a table for me"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "Give me your address"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "I am not sure about sanitation safety in COVID"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "OK. Whats the menu?"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "You have any suggestion?"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "I am vegetarian"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "Do you serve vegan food?"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "Can I know the recipe of the Pad-Thai noodles?"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "Tell me more about the Thukpa recipe"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "I just finished eating, loved the food!"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "Hate the staff behavior though"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
-
-    input = "Ok I will leave now, Bye!"
-    print("INPUT----->", input)
-    input = preprocess_sentence.preprocess_main(input)
-    input_vec = embed_data.embed_sentence(input, ft_model)
-    output_intent = detect_intent(data, input_vec)
-    print("OUTPUT-----> ", output_intent, "\n")
+    return output_intent
