@@ -6,13 +6,12 @@ import datetime
 
 import classify_intent
 
-
 app = Flask(__name__)
 
 seat_count = 50
 
 with open("dataset.json") as file:
-	data = json.load(file)
+    data = json.load(file)
 
 
 @app.route('/')
@@ -27,8 +26,9 @@ def index():
 def get_bot_response():
     global seat_count
     message = request.args.get('msg')
-    if message:
 
+    if message:
+        '''
         tag = classify_intent.classify(message)
         if len(tag) != 0:
             if tag == "book_table":
@@ -68,9 +68,12 @@ def get_bot_response():
                 response = random.choice(responses)
         else:
             response = "I didn't quite get that, please try again."
+        '''
+        response = "DUMMY_RESPONSE"
+
         return str(response)
     return "Missing Data!"
 
 
 if __name__ == "__main__":
-	app.run()
+    app.run()
