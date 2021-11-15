@@ -7,9 +7,6 @@ import numpy as np
 import json
 import fasttext as ft
 
-import gzip
-import shutil
-
 import preprocess_sentence
 
 
@@ -44,12 +41,7 @@ def write_embedded_data(data):
 
 
 def load_embedding_model():
-    ft_path = 'cc.en.300.bin.gz'
-    with gzip.open(ft_path, 'rb') as f_in:
-        with open('cc.en.300.bin', 'wb') as f_out:
-            shutil.copyfileobj(f_in, f_out)
     ft_model = ft.load_model('cc.en.300.bin')
-
     return ft_model
 
 

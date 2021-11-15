@@ -2,7 +2,6 @@
 <html>
   <title>Restaurant Chatbot</title>
   <head>
-    <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
     <link rel="icon" href="">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
@@ -13,22 +12,25 @@
         background-size: cover;
         background-attachment: fixed;
       }
-      h1 {
-        border: 1px solid white;
+      h2 {
+        border: 1px solid black;
         border-radius: 5px;
         color: #ce9e62;
-        display: inline-block;Alegreya
-        font-size: 3em;
-        margin: 5;
-        padding: 10px;
+        display: inline-block;Helvetica
+        margin: 5px;
+        padding: 5px;
       }
       #chatbox {
-        margin-top: auto;
-        margin-bottom: auto;
+        border: 1px solid black;
+        margin-top: 10px;
+        margin-bottom: 60px;
         margin-left: auto;
         margin-right: auto;
         width: 40%;
-        margin-top: 60px;
+        height: 40%
+        position:fixed;
+        overflow-y:scroll;
+        overflow-x:hidden;
       }
       #userInput {
         margin-left: auto;
@@ -40,16 +42,17 @@
         width: 90%;
         border: none;
         border-bottom: 3px solid black;
-        font-family: 'Alegreya';
+        font-family: 'Helvetica';
         font-size: 17px;
       }
       .userText {
+        width:fit-content; width:-webkit-fit-content; width:-moz-fit-content;
         color: white;
-        background-color: #4b6777;
-        font-family: 'Alegreya';
-        font-size: 17px;
-        text-align: center;
-        line-height: 30px;
+        background-color: #38B6FF;
+        font-family: 'Helvetica';
+        font-size: 12px;
+        text-align: right;
+        line-height: 20px;
         border-radius: 5px;
       }
       .userText span {
@@ -57,12 +60,13 @@
         border-radius: 5px;
       }
       .botText {
-        color: #ce9e62;
-        background-color: #2c2c2c;
-        font-family: 'Alegreya';
-        font-size: 17px;
-        text-align: center;
-        line-height: 30px;
+        width:fit-content; width:-webkit-fit-content; width:-moz-fit-content;
+        color: white;
+        background-color: #FFAE7D;
+        font-family: 'Helvetica';
+        font-size: 12px;
+        line-height: 20px;
+        text-align: left;
         border-radius: 5px;
       }
       .botText span {
@@ -73,7 +77,6 @@
         margin-left: auto;
         margin-right: auto;
         width: 100%;
-        margin-top: 60px;
         border-radius: 5px;
       }
       input[type=text] {
@@ -90,9 +93,9 @@
   <body background="{{ url_for('static', filename='images/slider.jpg') }}">
     <img />
     <center>
-      <h1>
-      Restaurant Chatbot
-      </h1>
+      <h2>
+      Welcome to Aindri's Restro!
+      </h2>
     </center>
     <div class="boxed">
       <div>
@@ -105,14 +108,14 @@
 <script>
         function getBotResponse() {
           var rawText = $("#nameInput").val();
-          var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+          var userHtml = '<p class="userText"><span><b>' + "GUEST: " + '</b>' + rawText + "</span></p>";
           $("#nameInput").val("");
           $("#chatbox").append(userHtml);
           document
             .getElementById("userInput")
             .scrollIntoView({ block: "start", behavior: "smooth" });
           $.get("/get", { msg: rawText }).done(function(data) {
-            var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+            var botHtml = '<p class="botText"><span><b>' + "RESTROBOT: " + '</b>' + data + "</span></p>";
             $("#chatbox").append(botHtml);
             document
               .getElementById("userInput")
