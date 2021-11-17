@@ -1,0 +1,27 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "Hey", "Hello", "Good morning!", "Hey! Good morning", "Hey there", "Hey Janet", "Very good morning", "A very good morning to you", "Greeting", "Greetings to you"],
+     "responses": ["Hello I'm Restrobot! How can I help you?", "Hi! I'm Restrobot. How may I assist you today?"]
+    },
+    {"tag": "book_table",
+     "patterns": ["Book a table","Can I book a table?", "I want to book a table", "Book seat", "I want to book a seat", "Can I book a seat?", "Could you help me book a table", "Can I reserve a seat?", "I need a reservation", "Can you help me with a reservation", "Can I book a reservation", "Can i have a table?", "Help me reserve a table", "book table"],
+     "responses": [""]
+    },
+    {"tag": "goodbye",
+     "patterns": ["cya", "I will leave now","See you later", "Goodbye", "Leaving now, Bye" , "Good bye dear", "Bye dear","I am Leaving", "Have a Good day", "cya later", "I gotta go now", "I gotta rush now", "Thank you, bye", "Bye", "Ok Bye", "Okay goodnight", "Have a good day ahead", "Have a great day", "Tata", "Take care"],
+     "responses": ["It's been my pleasure serving you!", "Hope to see you again soon! Goodbye!"]
+    },
+    {"tag": "negative_feedback",
+        "patterns": ["what the fuck is wrong with these noodles?", "The choco lava was so undercooked", "Ew such a waste of money man", "too salty", "we were served cold food", "so disappointed", "the food is pathetic", "hate it", "my wife hates the food","eww", "hate the staff behavior", "i hate it", "hate the service","please train the staff properly", "This was such a waste of money", "Hate the staff", "Extremely dissatisfied", "disappointed", "so bad", "very bad", "disgusting food"],
+        "responses": ["Thank you so much for your valuable feedback. We deeply regret the inconvenience. We have forwarded your concerns to the authority and hope to satisfy you better the next time!"]
+    },
+    {"tag": "offers",
+        "patterns": ["Could you tell me the pocket friendly options?","Are there any discounts going on?", "Are there any special offers today?", "What about the festive offers?", "Could you please tell me which foods are on discount?", "are there any discounts", "are there any discount offers", "do you have any offers?", "what are the offers going on?", "what are the discounts available?"],
+        "responses": [""]
+    },
+    {"tag": "veg_enquiry",
+        "patterns": ["Can I see the vegetarian options?","Do you have any vegetarian options??", "Please show me your best vegetarian foods", "I dont want to eat non veg", "I am vegetarian", "vegetarian", "is this place vegetarian?"],
+        "responses": [""]
+    }
+]
+}

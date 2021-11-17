@@ -1,7 +1,7 @@
 {"intents": [
     {"tag": "greeting",
      "patterns": ["Hi", "Hey", "Hello", "Good morning!", "Hey! Good morning", "Hey there", "Hey Janet", "Very good morning", "A very good morning to you", "Greeting", "Greetings to you"],
-     "responses": ["Hello I'm Restrobot! Welcome to ", "Hi! I'm Restrobot aka The Restaurant Superbot.", "Hi there, how can I help?", "How may I help you?", "Hey there!"]
+     "responses": ["Hello I'm Restrobot! How can I help you?", "Hi! I'm Restrobot. How may I assist you today?"]
     },
     {"tag": "book_table",
      "patterns": ["Book a table","Can I book a table?", "I want to book a table", "Book seat", "I want to book a seat", "Can I book a seat?", "Could you help me book a table", "Can I reserve a seat?", "I need a reservation", "Can you help me with a reservation", "Can I book a reservation", "Can i have a table?", "Help me reserve a table", "book table"],
@@ -70,7 +70,7 @@
     },
     {"tag": "general",
         "patterns": ["okay","sure","cool","hmm", "fine", "thanks", "uhuh"],
-        "responses": [":)"]
+        "responses": [":)", "Glad to serve you!", "Happy to help!", "Always happy to assist you!"]
     }
 ]
 }

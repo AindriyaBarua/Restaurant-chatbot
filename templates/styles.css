@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <title>Restaurant Chatbot</title>
-  <head>
-    <link rel="icon" href="">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <style>
-      body {
+body {
         font-family: monospace;
         background-position: center;
         background-repeat: no-repeat;
@@ -13,10 +6,9 @@
         background-attachment: fixed;
       }
       h2 {
-        background-color: white;
-        border: 2px solid black;
+        border: 1px solid black;
         border-radius: 5px;
-        color: #03989E;
+        color: #ce9e62;
         display: inline-block;Helvetica
         margin: 5px;
         padding: 5px;
@@ -50,7 +42,7 @@
       .userText {
         width:fit-content; width:-webkit-fit-content; width:-moz-fit-content;
         color: white;
-        background-color: #FF9351;
+        background-color: #38B6FF;
         font-family: 'Helvetica';
         font-size: 12px;
         margin-left: auto;
@@ -68,7 +60,7 @@
         margin-right: auto;
         width:fit-content; width:-webkit-fit-content; width:-moz-fit-content;
         color: white;
-        background-color: #00C2CB;
+        background-color: #FFAE7D;
         font-family: 'Helvetica';
         font-size: 12px;
         line-height: 20px;
@@ -94,49 +86,3 @@
         position: fixed;
         border-radius: 5px;
       }
-    </style>
-  </head>
-  <body background="{{ url_for('static', filename='images/slider.jpg') }}">
-    <img />
-    <center>
-      <h2>
-      Welcome to Aindri's Restro
-      </h2>
-      <h4>
-        You are chatting with our customer support bot!
-      </h4>
-    </center>
-    <div class="boxed">
-      <div>
-        <div id="chatbox">
-        </div>
-      </div>
-        <div id="userInput">
-          <input id="nameInput" type="text" name="msg" placeholder="Ask me anything..." />
-        </div>
-<script>
-        function getBotResponse() {
-          var rawText = $("#nameInput").val();
-          var userHtml = '<p class="userText"><span><b>' + "You : " + '</b>' + rawText + "</span></p>";
-          $("#nameInput").val("");
-          $("#chatbox").append(userHtml);
-          document
-            .getElementById("userInput")
-            .scrollIntoView({ block: "start", behavior: "smooth" });
-          $.get("/get", { msg: rawText }).done(function(data) {
-            var botHtml = '<p class="botText"><span><b>' + "Restrobot : " + '</b>' + data + "</span></p>";
-            $("#chatbox").append(botHtml);
-            document
-              .getElementById("userInput")
-              .scrollIntoView({ block: "start", behavior: "smooth" });
-          });
-        }
-        $("#nameInput").keypress(function(e) {
-          if (e.which == 13) {
-            getBotResponse();
-          }
-        });
-</script>
-</div>
-</body>
-</html>

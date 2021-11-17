@@ -11,7 +11,7 @@ import preprocess_sentence
 
 
 def parse_data(ft_model):
-    with open("dataset.json") as file:
+    with open("dataset_short.json") as file:
         data = json.load(file)
 
     embedded_patterns = []
@@ -36,7 +36,7 @@ def embed_sentence(sentence, ft_model):
 def write_embedded_data(data):
     json_object = json.dumps(data, indent=4)
 
-    with open("embedded_data.json", "w") as outfile:
+    with open("embedded_data_short.json", "w") as outfile:
         outfile.write(json_object)
 
 
