@@ -1,10 +1,5 @@
 """
 Developed by Aindriya Barua in November, 2021
-https://codepen.io/sajadhsm/pen/odaBdd
-https://towardsdatascience.com/how-to-build-a-basic-chatbot-from-scratch-f63a2ccf5262
-https://raw.githubusercontent.com/iampratheesh/Restaurant-Chatbot/master/templates/index.html
-
-
 """
 
 import codecs
