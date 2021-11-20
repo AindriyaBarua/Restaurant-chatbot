@@ -4,7 +4,7 @@ import datetime
 import pymongo
 import uuid
 
-import classify_intent
+import intent_classifier
 
 seat_count = 50
 client = pymongo.MongoClient("mongodb://localhost:27017/")
@@ -17,14 +17,18 @@ with open("dataset.json") as file:
 
 
 def get_intent(message):
-    tag = classify_intent.classify(message)
+    tag = intent_classifier.classify(message)
     return tag
 
-
+'''
+Reduce seat_count variable by 1
+Generate and give customer a unique booking ID if seats available
+Write the booking_id and time of booking into Collection named bookings in restaurant database
+'''
 def book_table():
     global seat_count
     seat_count = seat_count - 1
-    booking_id = uuid.uuid4()
+    booking_id = str(uuid.uuid4())
     now = datetime.datetime.now()
     booking_time = now.strftime("%Y-%m-%d %H:%M:%S")
     booking_doc = {"booking_id": booking_id, "booking_time": booking_time}
@@ -39,6 +43,7 @@ def vegan_menu():
         response = "Vegan options are: "
         for x in vegan_doc:
             response = response + str(x.get("item")) + " for Rs. " + str(x.get("cost")) + "; "
+        response = response[:-1] # to remove the last ;
     else:
         response = "Sorry no vegan options are available"
     return response
@@ -51,6 +56,7 @@ def veg_menu():
         response = "Vegetarian options are: "
         for x in vegan_doc:
             response = response + str(x.get("item")) + " for Rs. " + str(x.get("cost")) + "; "
+        response = response[:-1]
     else:
         response = "Sorry no vegetarian options are available"
     return response
@@ -58,12 +64,16 @@ def veg_menu():
 
 def offers():
     all_offers = menu_collection.distinct('offer')
-    response = "SPECIAL OFFERS: "
-    for ofr in all_offers:
-        docs = menu_collection.find({"offer": ofr})
-        response = response + ofr.upper() + " On: "
-        for x in docs:
-            response = response + str(x.get("item")) + " - Rs. " + str(x.get("cost")) + "; "
+    if len(all_offers)>0:
+        response = "The SPECIAL OFFERS are: "
+        for ofr in all_offers:
+            docs = menu_collection.find({"offer": ofr})
+            response = response + ' ' + ofr.upper() + " On: "
+            for x in docs:
+                response = response + str(x.get("item")) + " - Rs. " + str(x.get("cost")) + "; "
+            response = response[:-2]
+    else:
+        response = "Sorry there are no offers available now."
     return response
 
 
@@ -121,7 +131,7 @@ def get_specific_response(tag):
 
 def show_menu():
     all_items = menu_collection.distinct('item')
-    response = ','.join(all_items)
+    response = ', '.join(all_items)
     return response
 
 
@@ -131,6 +141,7 @@ def generate_response(message):
     response = ""
     if tag != "":
         if tag == "book_table":
+
             if seat_count > 0:
                 booking_id = book_table()
                 response = "Your table has been booked successfully. Please show this Booking ID at the counter: " + str(
@@ -162,11 +173,13 @@ def generate_response(message):
 
         elif tag == "positive_feedback":
             record_feedback(message, "positive")
-            response = get_specific_response(tag)
+            response = "Thank you so much for your valuable feedback. We look forward to serving you again!"
 
         elif "negative_response" == tag:
             record_feedback(message, "negative")
-            response = get_specific_response(tag)
+            response = "Thank you so much for your valuable feedback. We deeply regret the inconvenience. We have " \
+                       "forwarded your concerns to the authority and hope to satisfy you better the next time! "
+        # for other intents with pre-defined responses that can be pulled from dataset
         else:
             response = get_specific_response(tag)
     else:

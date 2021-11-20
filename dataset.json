@@ -13,7 +13,7 @@
     },
     {"tag": "goodbye",
      "patterns": ["cya", "I will leave now","See you later", "Goodbye", "Leaving now, Bye" , "Good bye dear", "Bye dear","I am Leaving", "Have a Good day", "cya later", "I gotta go now", "I gotta rush now", "Thank you, bye", "Bye", "Ok Bye", "Okay goodnight", "Have a good day ahead", "Have a great day", "Tata", "Take care"],
-     "responses": ["It's been my pleasure serving you!", "Hope to see you again soon! Goodbye!"]
+     "responses": ["It's been my pleasure serving you!", "Hope to see you again soon! Goodbye!", "Bye! Hope to see you again!"]
     },
     {"tag": "identity",
      "patterns": ["what is your name", "what should I call you", "whats your name?", "who are you", "Are you human?", "Am i talking to a bot", "Are you a bot", "Can i have your name please", "name"],
@@ -29,19 +29,19 @@
     },
     {"tag": "contact",
      "patterns": ["contact information", "how do we contact you", "how can i contact you", "can i get the contact details", "I wanna give some feedback", "how can i give some feedback?", "CAn you give me the contact of an executive?", "What is the help desk phone number?","Can you give me your number", "Can i get the customer care number?", "CAn I get help desk number"],
-     "responses": ["You can contact us at contact@raindrisrestro.com"]
+     "responses": ["You can contact us at contact@aindrisrestro.com, our help desk number is 8787878787"]
     },
     {"tag": "address",
      "patterns": ["what is the location?","whats the location", "where are you located?", "where is the restaurant located?", "address", "whats the address?", "what is the address of the restaurant", "I am not able to locate you", "I cant find your location", "CAn i have the address of the restaurant", "how to reach there?", "Address?", "what is the address of this restaurant?"],
-     "responses": ["You can locate us at Aindri's Restro, Manyata Park, Bangalore"]
+     "responses": ["You can locate us at Aindri's Restro, Phase 1, Rd Number 6, Whitefield, Bengaluru, Karnataka 560066"]
     },
     {"tag": "positive_feedback",
         "patterns": ["the noodles were amazing","i loved the food", "you did a good job", "Love the food", "Really love it", "Love the staff behavior", "my son devoured the brownie!", "pizza was so cheesy!", "perfectly baked", "we are very satisfied with the service", "the soup was a real game changer", "such delicious flavours", "so glad we discovered this place", "Me and my family is very satisfied with this service and food", "this place is awesome"],
-        "responses": ["Thank you so much for your valuable feedback. We look forward to serving you again!"]
+        "responses": [""]
     },
     {"tag": "negative_feedback",
-        "patterns": ["what the fuck is wrong with these noodles?", "The choco lava was so undercooked", "Ew such a waste of money man", "too salty", "we were served cold food", "so disappointed", "the food is pathetic", "hate it", "my wife hates the food","eww", "hate the staff behavior", "i hate it", "hate the service","please train the staff properly", "This was such a waste of money", "Hate the staff", "Extremely dissatisfied", "disappointed", "so bad", "very bad", "disgusting food"],
-        "responses": ["Thank you so much for your valuable feedback. We deeply regret the inconvenience. We have forwarded your concerns to the authority and hope to satisfy you better the next time!"]
+        "patterns": ["what the fuck is wrong with these noodles?", "The choco lava was so undercooked", "Ew such a waste of money man", "Prices are too high honestly", "I hate the menu, such less options", "too salty", "we were served cold food", "so disappointed", "the food is pathetic", "hate it", "my wife hates the food","eww", "hate the staff behavior", "i hate it", "hate the service","please train the staff properly", "This was such a waste of money", "Hate the staff", "Extremely dissatisfied", "disappointed", "so bad", "very bad", "disgusting food"],
+        "responses": [""]
     },
     {"tag": "sanitation",
         "patterns": ["is it really safe to eat here?","Could you tell your COVID safety protocols?", "I would like to know about the cleanliness of the restaurant", "Please share your sanitization process", "I am concerned about the COVID related sanitization", "Is it safe to eat out in this pandemic?", "are you clean", "i am concerned about the cleanliness"],
