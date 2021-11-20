@@ -4,7 +4,6 @@ Detailed explanation of the project is given in my tech blog here: https://mediu
 
 How to set up and run the project?
 
-This is just for having the project up and running, I will explain the parts one by one deeper into the blog :)
 1. Install Pre-requisites
 My python version is 3.6.13.
 To install all the required libraries, download/clone my GitHub repo and in the folder, open CMD and enter:
