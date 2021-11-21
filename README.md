@@ -6,7 +6,7 @@ How to set up and run the project?
 
 1. Install Pre-requisites
 My python version is 3.6.13.
-To install all the required libraries, download/clone my GitHub repo and in the folder, open CMD and enter:
+To install all the required libraries, download/clone my GitHub repo and in the folder, open CMD and enter:  
 > pip install -r requirements.txt
 
 2. Download pre-trained FastText English model
@@ -25,6 +25,6 @@ booking collection writer the unique booking ID and time-stamp of booking, so th
 
 5. Run Flask
 This will launch the web app on localhost
-> export FLASK_APP=app
-> export FLASK_ENV=development
-> flask run
+> export FLASK_APP=app  
+> export FLASK_ENV=development  
+> flask run  
