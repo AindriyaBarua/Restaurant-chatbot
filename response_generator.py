@@ -1,3 +1,7 @@
+"""
+Developed by Aindriya Barua in November, 2021
+"""
+
 import json
 import random
 import datetime
@@ -43,7 +47,7 @@ def vegan_menu():
         response = "Vegan options are: "
         for x in vegan_doc:
             response = response + str(x.get("item")) + " for Rs. " + str(x.get("cost")) + "; "
-        response = response[:-1] # to remove the last ;
+        response = response[:-2] # to remove the last ;
     else:
         response = "Sorry no vegan options are available"
     return response
@@ -56,7 +60,7 @@ def veg_menu():
         response = "Vegetarian options are: "
         for x in vegan_doc:
             response = response + str(x.get("item")) + " for Rs. " + str(x.get("cost")) + "; "
-        response = response[:-1]
+        response = response[:-2] # to remove the last ;
     else:
         response = "Sorry no vegetarian options are available"
     return response
@@ -71,7 +75,7 @@ def offers():
             response = response + ' ' + ofr.upper() + " On: "
             for x in docs:
                 response = response + str(x.get("item")) + " - Rs. " + str(x.get("cost")) + "; "
-            response = response[:-2]
+            response = response[:-2] # to remove the last ;
     else:
         response = "Sorry there are no offers available now."
     return response
