@@ -1,5 +1,10 @@
 # Restaurant-chatbot
 
+Architecture overview:
+![step1_chatbot drawio](https://user-images.githubusercontent.com/20969232/142749382-d4d5732d-4bd8-4997-a72d-f0511b392d46.png)
+
+![restrobot_arch2 drawio](https://user-images.githubusercontent.com/20969232/142749378-ba6de4c5-2cad-4789-ab7a-0f549a7e4406.png)
+
 Detailed explanation of the project is given in my tech blog here: https://medium.com/@barua.aindriya/building-a-nlp-chatbot-for-a-restaurant-with-flask-b978337049f2
 
 How to set up and run the project?
