@@ -179,7 +179,7 @@ def generate_response(message):
             record_feedback(message, "positive")
             response = "Thank you so much for your valuable feedback. We look forward to serving you again!"
 
-        elif "negative_response" == tag:
+        elif "negative_feedback" == tag:
             record_feedback(message, "negative")
             response = "Thank you so much for your valuable feedback. We deeply regret the inconvenience. We have " \
                        "forwarded your concerns to the authority and hope to satisfy you better the next time! "
