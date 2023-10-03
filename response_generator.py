@@ -1,5 +1,5 @@
 """
-Developed by Aindriya Barua in November, 2021
+
 """
 
 import json
@@ -11,13 +11,27 @@ import uuid
 import intent_classifier
 
 seat_count = 50
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient("mongodb://remoteServer:27017/")
 db = client["restaurant"]
 menu_collection = db["menu"]
 feedback_collection = db["feedback"]
 bookings_collection = db["bookings"]
 with open("dataset.json") as file:
     data = json.load(file)
+
+
+# 添加一个函数来导入本地的menu.json到数据库的menu中
+def import_menu_from_local():
+    with open('D:\9-29\Restaurant-chatbot-main\helper_scripts\menu.json', 'r') as file:
+        menu_data = json.load(file)
+
+        # # 清空当前的菜单集合
+        # menu_collection.delete_many({})
+
+        # 将新的菜单数据插入到集合中
+        menu_collection.insert_many(menu_data)
+
+
 
 
 def get_intent(message):
@@ -141,6 +155,7 @@ def show_menu():
 
 def generate_response(message):
     global seat_count
+    import_menu_from_local()#当用户建立连接的时候就会上传本地菜单到数据库
     tag = get_intent(message)
     response = ""
     if tag != "":
